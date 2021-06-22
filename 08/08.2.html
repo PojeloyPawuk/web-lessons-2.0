@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = new Array();
+        let text;
+        let sum = 0;
+        let parni = 0;
+        let neparni = 0;
+    do{
+    text = prompt("Введіть числа:");
+    if(text === null)
+    {
+        arr.push(text);
+        break;
+    }
+    arr.push(text);
+    }
+    while(!isNaN(text) && text != "");
+    arr.pop();
+    for(let i = 0; i < arr.length; i++)
+    {
+    sum += +arr[i];
+    if(+arr[i] % 2 == 0)
+        parni++;
+    else
+        neparni++;
+    }
+text = arr.join(", ");
+alert(`${text}\nСума: ${sum}\nПарні: ${parni}\nНепарні: ${neparni}`);
+    </script>
+</body>
+</html>
